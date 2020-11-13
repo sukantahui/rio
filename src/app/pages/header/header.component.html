@@ -1,71 +1,47 @@
+
+
+
 <div class="navbar">
-  <!--For Public-->
-  <mat-toolbar [ngStyle]="myStyle()">
-    <mat-toolbar-row fxLayoutAlign="space-between center">
-      <div fxLayout="row">
-        <button mat-button>
-<!--          <mat-icon>home</mat-icon>-->
-          <img src="assets/images/ctt.png" width="25vw">
-          <span *ngIf="!deviceXs" class="logo">{{projectName}}</span>
-        </button>
-        <div *ngIf="!deviceXs">
-          <button mat-button
-                  [routerLink]="['/']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Home
-          </button>
-          <button mat-button
-                  [routerLink]="['/gallery']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Gallery
-          </button>
-          <button mat-button
-                  [routerLink]="['/video']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Video
-          </button>
-          <button mat-button
-                  [routerLink]="['/testimony']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Testimony
-          </button>
-          <button mat-button
-                  [routerLink]="['/contactUs']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Contact Us
-          </button>
-        </div>
-        <div *ngIf="deviceXs">
-
-          <button mat-button [matMenuTriggerFor]="belowMenu">Menu<mat-icon>more_vert</mat-icon></button>
-          <mat-menu #belowMenu="matMenu" yPosition="below">
-            <button mat-menu-item
-                    [routerLink]="['/']"
-                    routerLinkActive="MyActiveMenu"
-                    [routerLinkActiveOptions]="{exact: true}">Home</button>
-            <button mat-menu-item
-                    [routerLink]="['/gallery']"
-                    routerLinkActive="MyActiveMenu"
-                    [routerLinkActiveOptions]="{exact: true}">Gallery</button>
-
-            <button mat-menu-item
-                    [routerLink]="['/video']"
-                    routerLinkActive="MyActiveMenu"
-                    [routerLinkActiveOptions]="{exact: true}">Video</button>
-
-            <button mat-menu-item
-                    [routerLink]="['/testimony']"
-                    routerLinkActive="MyActiveMenu"
-                    [routerLinkActiveOptions]="{exact: true}">Testimony</button>
-
-            <button mat-menu-item
-                    [routerLink]="['/contactUs']"
-                    routerLinkActive="MyActiveMenu"
-                    [routerLinkActiveOptions]="{exact: true}">Contact Us</button>
-
-          </mat-menu>
-        </div>
-      </div>
-    </mat-toolbar-row>
+  <mat-toolbar color="primary">
+  <span class="fill-remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/gallery']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>people_outline</mat-icon>
+        <span>Gallery</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/video']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>videocam</mat-icon>
+        <span>Video</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/testimony']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>videocam</mat-icon>
+        <span>Testimony</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/contactUs']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>videocam</mat-icon>
+        <span>Contact</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </span>
+    <span class="fill-remaining-space">Application Title</span>
   </mat-toolbar>
 </div>
