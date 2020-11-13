@@ -1,0 +1,103 @@
+#middle{
+  color: white;
+  text-align: center;
+  line-height: 30px;
+
+
+}
+#left{
+  color: white;
+  text-align: center;
+  text-align: center;
+  line-height: 30px;
+
+}
+#right{
+  color: white;
+  text-align: center;
+  text-align: center;
+  line-height: 30px;
+}
+#second{
+  color: white;
+  text-align: center;
+  line-height: 30px;
+
+}
+
+#modi{
+  height: 70px;
+  width: 60px;
+}
+#mounita{
+  height: 70px;
+  width: 60px;
+}
+#ritu{
+  height: 70px;
+  width: 60px;
+}
+#q2{
+  height: 40px;
+  width: 40px;
+}
+.comment-card{
+  width: 33%;
+}
+.sender{
+  color: brown;
+}
+.message{
+  font-style: revert;
+}
+
+.quotation-left{
+  font-size: 50px;
+}
+.quotation-right{
+  font-size: 50px;
+  vert-align: bottom;
+}
+
+
+
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+
+blockquote:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+}
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+.avatar{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+

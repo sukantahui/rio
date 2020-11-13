@@ -1,0 +1,15 @@
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ng-template  ngbSlide *ngFor="let img of pictures; index as i">
+    <div class="carousel-caption-middle">
+      <h1 *ngIf="!isDeviceXs">{{img.comment}} </h1>
+      <h6 *ngIf="isDeviceXs">{{img.comment}} </h6>
+    </div>
+    <a href="https://www.flickr.com/photos/190461213@N05/" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img.large1" alt="My image {{i + 1}} description">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+<hr>
+

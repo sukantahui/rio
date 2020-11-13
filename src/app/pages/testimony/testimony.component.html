@@ -1,0 +1,74 @@
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly start" layout-wrap="" fxLayoutGap="2px">
+
+    <mat-card fxFlex="{{!isDeviceXs? comment.fxWidht : 100}}" class="comment-card m-2" *ngFor="let comment of comments" style="background-color: rgba(249, 249, 235, 0.8)">
+      <mat-card-header>
+        <div mat-card-avatar  class="example-header-image"></div>
+        <mat-card-title *ngIf="comment.type==='picture'">{{comment.title}} </mat-card-title>
+        </mat-card-header>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <div *ngIf="comment.type==='picture'">
+          <img class="message-image img-fluid" src="{{comment.picture}}">
+        </div>
+        <div *ngIf="comment.type==='message'" class="text-justify">
+          <blockquote>
+          {{comment.message}}
+          </blockquote>
+        </div>
+        <p *ngIf="comment.type==='picture'">
+          {{comment.message}}
+        </p>
+        <div class="sender" fxLayout="column" fxFill fxLayoutAlign="center end">
+          <div *ngIf="comment.type==='message'">
+            <cite>{{comment.sender}}</cite>
+<!--            <b class="sender">&#45;&#45; {{comment.sender}}</b>-->
+          </div>
+<!--          <div *ngIf="comment.type==='message'"  class="comment-image">-->
+<!--            <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >-->
+<!--          </div>-->
+          <div *ngIf="comment.type==='message'" class="avatar" [ngStyle]="{'background-image': 'url(' + comment.avatar + ')','background-size': 'cover'}"></div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly start" layout-wrap="" fxLayoutGap="2px">
+
+  <mat-card fxFlex="{{!isDeviceXs? sukantahui.fxWidht : 100}}" class="comment-card m-2"  style="background-color: rgba(249, 249, 235, 0.8)">
+    <mat-card-header>
+      <div mat-card-avatar  class="example-header-image"></div>
+      <mat-card-title >{{sukantahui.title}} </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+      <div  class="text-justify">
+        <blockquote>
+          {{sukantahui.message1}}
+          {{sukantahui.message2}}
+          <div>তোর কাছে এখনও অনেক যত্নে রাখা আছে এই ওয়েবসাইট টা &nbsp;<a href="https://sukantahui.github.io/mybirtday/" target="_blank">Click here to see the first effort</a> </div>
+          <a [routerLink]="" (click)="openDialog(sukantahui)">
+            <img class="img-fluid" src="https://live.staticflickr.com/65535/50591274346_167661de42_w.jpg">
+          </a>
+        </blockquote>
+      </div>
+      <div class="sender" fxLayout="column" fxFill fxLayoutAlign="center end">
+        <!--          <div *ngIf="comment.type==='message'"  class="comment-image">-->
+        <!--            <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >-->
+        <!--          </div>-->
+        <footer>—Sukanta Hui, <cite>Always with you</cite></footer>
+        <div  class="avatar" [ngStyle]="{'background-image': 'url(' + sukantahui.avatar + ')','background-size': 'cover'}"></div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+

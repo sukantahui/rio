@@ -1,0 +1,16 @@
+  <div fxLayout="row" fxLayoutAlign="start-evenly stretch" class="comment-div">
+
+    <div fxFlex="95"  fxLayoutAlign="center center">
+      <span>{{data.comment}}</span>
+    </div>
+    <button mat-button class="button close-icon" fxFlex  [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-card class="card-margins">
+    <img class="img-fluid" src="{{data.large1}}" style="height: 90vh;">
+  </mat-card>
+
+
+

@@ -1,0 +1,78 @@
+
+
+
+
+
+<ul>
+  <li class="m-1" *ngFor="let picture of pictures">
+    <a [routerLink]="" (click)="openDialog(picture)">
+        <img src="{{picture.medium1}}" alt="We love you সিপুদি!!!" loading="lazy" *ngIf="picture.medium1.length>0">
+    </a>
+  </li>
+  <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
+  <li></li>
+</ul>
+
+
+
+
+
+
+<!--  <div fxLayout="column" fxLayoutGap="32px" [style.height]="'100%'">-->
+<!--    <mat-card class="card-margins m-auto" fxLayout="column"  fxLayoutAlign="center center">-->
+<!--      <div class="m-auto" fxLayout="row" fxLayoutGap="32px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="10px">-->
+<!--        <div class="m-2" fxFlex="0 100 90%">-->
+<!--          <a [routerLink]="" (click)="openDialog('asdf')">-->
+<!--            <img mat-card-image src="https://live.staticflickr.com/65535/50432569686_7d0c21ccd2.jpg">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        <div class="pic-div m-2" fxFlex="0 100 90%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50437965001_9e40235c1c.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div class="m-2" fxFlex="0 100 90%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50436558697_9c196070b5.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div class="m-2" fxFlex="0 100 90%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div class="m-2" fxFlex="0 100 90%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </mat-card>-->
+
+<!--    <mat-card class="card-margins">-->
+<!--      <div fxLayout="row" fxLayoutGap="32px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="10px">-->
+<!--        <div fxFlex="0 100 100%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432569686_7d0c21ccd2.jpg">-->
+<!--        </div>-->
+<!--        <div fxFlex="0 100 100%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div fxFlex="0 100 100%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50436558697_9c196070b5.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div fxFlex="0 100 100%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--        <div fxFlex="0 100 100%">-->
+<!--          <img mat-card-image src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg" alt="Free image">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </mat-card>-->
+<!--  </div>-->
+
+
+
+<!--<div class="container p-4" fxLayout="column" fxLayout.md="row" fxLayoutGap="5px" fxFlexAlign="center">-->
+<!--  <div class="cardWrap" *ngFor="let row of pictures" fxLayoutGap="5px" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row"  fxFlexAlign="space-between center"  >-->
+<!--    <div *ngFor="let picture of row" class="picture-div"  fxFlexAlign="center center" fxFlex="fill" fxLayout="row">-->
+<!--      <div fxFlex="fill">-->
+<!--          <a [routerLink]="" (click)="openDialog(picture)">-->
+<!--            <img class="img-fluid" src="{{picture.medium1}}">-->
+<!--          </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
