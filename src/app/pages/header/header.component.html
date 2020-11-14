@@ -1,9 +1,10 @@
 
 
 
-<div class="navbar">
+<div class="navbar" fxLayout="row">
   <mat-toolbar color="primary">
-  <span class="fill-remaining-space">
+<!--    menu for mobile-->
+  <span class="">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
@@ -42,6 +43,37 @@
       </button>
     </mat-menu>
   </span>
-    <span class="fill-remaining-space">Application Title</span>
+  <span class="">Application Title</span>
+<!--    menu for pc-->
+  <div class="fill-remaining-space">
+    <div *ngIf="!deviceXs">
+      <button mat-button
+              [routerLink]="['/']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">Home
+      </button>
+      <button mat-button
+              [routerLink]="['/gallery']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">Gallery
+      </button>
+      <button mat-button
+              [routerLink]="['/video']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">Video
+      </button>
+      <button mat-button
+              [routerLink]="['/testimony']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">Testimony
+      </button>
+      <button mat-button
+              [routerLink]="['/contactUs']"
+              routerLinkActive="MyActiveMenu"
+              [routerLinkActiveOptions]="{exact: true}">Contact Us
+      </button>
+    </div>
+  </div>
   </mat-toolbar>
+
 </div>
